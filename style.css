@@ -1,17 +1,19 @@
 :root {
     --principal-color: #FF9A6C;
+    --high-color: #FF725E;
     --text-color: #263238;
+    --secondary-color: rgba(255, 154, 108, 0.25);
+
+    --whatsapp-color: #41ce4a;
 }
 
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+    font-family: "Montserrat", sans-serif;
     color: var(--text-color);
-    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -19,8 +21,11 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    
+    position: sticky;
+    top: 0;
 
-    padding: 25px 125px;
+    padding: 25px 50px;
     
     background-color: var(--principal-color);
 
@@ -35,6 +40,12 @@ header {
 
         font-size: 20px;
         font-weight: 600;
+
+        * {
+            &:hover {
+                color: var(--high-color);
+            }
+        }
     }
 
     .title-header {
@@ -43,7 +54,7 @@ header {
     }
 }
 
-.start-section {
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,10 +66,26 @@ header {
     h1 {
         font-size: 32px;
         font-weight: 600;
+
+        width: 100%;
+        text-align: start;
     }
+
     p {
         font-size: 1rem;
         font-weight: 400;
+    }
+
+    ul {
+        width: 100%;
+        padding-left: 1rem;
+    }
+
+    .image-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .text-area {
@@ -66,7 +93,165 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        gap: 2rem;
+    }
+}
+
+.start-section {
+    .btn-area {
+        width: 100%;
         
-        gap: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+}
+
+.shop-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+
+    h1 {
+        text-align: center;
+    }
+
+    .text-area {
+        max-width: 950px;
+        text-align: center;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+
+    padding: 25px 50px;
+
+    background-color: var(--secondary-color);
+
+    div {
+        display: flex;
+        flex-direction: column;
+
+        gap: 0.5rem;
+    }
+
+    .dados {
+        max-width: 300px;
+        
+        .contato {
+            display: flex;
+            align-items: center;
+            
+            text-decoration: none;
+            cursor: pointer;
+
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .title-footer {
+        font-weight: 900;
+        font-size: 24px;
+        text-decoration: none;
+        color: var(--high-color);
+    }
+}
+
+.desenvolvido-por {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: sticky;
+    bottom: 0;
+
+    gap: 1rem;
+
+    background-color: var(--text-color);
+    height: auto;
+    padding: 5px 0;
+
+    span {
+        font-size: 0.8rem;
+        color: white;
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+
+    min-width: 250px;
+    min-height: 55px;
+
+    padding: 1rem 2rem;
+    
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+
+    font-weight: 600;
+    font-size: 1rem;
+    
+    text-decoration: none;
+    cursor: pointer;
+
+    img {
+        margin-right: 10px;
+    }
+
+    &.btn-principal {
+        background-color: var(--high-color);
+        color: white;
+
+        &:hover {
+            border: 2px solid var(--text-color);
+        }
+    }
+    &.btn-secondary {
+        background-color: var(--secondary-color);
+        color: var(--high-color);
+
+        &:hover {
+            border: 2px solid var(--principal-color);
+        }
+    }
+    &.btn-whatsapp {
+        background-color: var(--whatsapp-color);
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        padding: 25px 125px;
+    }
+
+    section {
+        flex-direction: row;
+        
+        .image-area, .text-area {
+            flex: 1;
+        }
+    }
+
+    .clinica-section {
+        .image-area {
+            flex: 0.7;
+        }
+    }
+
+    footer {
+        padding: 25px 125px;
     }
 }
