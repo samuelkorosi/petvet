@@ -1,8 +1,10 @@
 :root {
     --principal-color: #FF9A6C;
-    --high-color: #FF725E;
-    --text-color: #263238;
     --secondary-color: rgba(255, 154, 108, 0.25);
+    --high-color: #FF725E;
+
+    --text-color: #263238;
+    --bg-dev-color: rgba(38, 50, 56, 0.9);
 
     --whatsapp-color: #41ce4a;
 }
@@ -174,7 +176,7 @@ footer {
 
     gap: 0.5rem;
 
-    background-color: var(--text-color);
+    background-color: var(--bg-dev-color);
     width: 100%;
     height: auto;
     padding: 10px 25px;
@@ -252,7 +254,71 @@ footer {
     }
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
+    section {
+        ul {
+            padding-left: 1rem;
+        }
+
+        .btn-area {
+            width: 100%;
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2rem;
+        }
+    }
+
+    .btn {
+        min-width: 250px;
+        min-height: 55px;
+
+        font-size: 1rem;
+
+        padding: 1rem 2rem;
+
+        img {
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    .action-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .btn-area {
+            max-width: 500px;
+            justify-content: center;
+        }
+    }
+
+    .desenvolvido-por {
+        padding: 5px 25px;
+
+        * {
+            font-size: 0.8rem;
+        }
+
+        .redes-sociais {
+            min-width: 100px;
+
+            img {
+                width: 15px;
+            }
+        }
+
+        .pipe {
+            display: flex;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
     header {
         padding: 25px 125px;
     }
@@ -353,6 +419,8 @@ footer {
     }
 
     .desenvolvido-por {
+        padding: 5px 25px;
+
         * {
             font-size: 0.8rem;
         }
