@@ -78,7 +78,7 @@ section {
 
     ul {
         width: 100%;
-        padding-left: 1rem;
+        padding-left: 2rem;
     }
 
     .image-area {
@@ -126,6 +126,7 @@ footer {
     align-items: start;
 
     padding: 25px 50px;
+    gap: 2rem;
 
     background-color: var(--secondary-color);
     font-size: 2rem;
@@ -138,6 +139,8 @@ footer {
     }
 
     .dados {        
+        gap: 1rem;
+
         .contato {
             display: flex;
             align-items: center;
@@ -146,6 +149,7 @@ footer {
             cursor: pointer;
 
             img {
+                width: 35px;
                 margin-right: 10px;
             }
         }
@@ -266,6 +270,10 @@ footer {
             text-align: start;
         }
 
+        ul {
+            padding-left: 1rem;
+        }
+
         .btn-area {
             width: 100%;
             
@@ -333,7 +341,14 @@ footer {
         }
 
         .dados {
+            gap: 0.5rem;
             max-width: 300px;
+
+            .contato {
+                img {
+                    width: 20px;
+                }
+            }
         }
     }
 
