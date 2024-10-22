@@ -79,9 +79,14 @@ section {
         font-weight: 400;
     }
 
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
     ul {
         width: 100%;
-        padding-left: 2rem;
+        padding-left: 1rem;
     }
 
     .image-area {
@@ -128,8 +133,8 @@ footer {
     flex-direction: column;
     align-items: start;
 
-    padding: 25px 20px;
-    gap: 2rem;
+    padding: 20px 20px;
+    gap: 1.5rem;
 
     background-color: var(--secondary-color);
     font-size: 1rem;
@@ -141,9 +146,7 @@ footer {
         gap: 0.5rem;
     }
 
-    .dados {        
-        gap: 0.5rem;
-
+    .dados {
         .contato {
             display: flex;
             align-items: center;
@@ -196,6 +199,12 @@ footer {
         justify-content: space-around;
 
         min-width: 100px;
+
+        a {
+            background-color: var(--bg-dev-color);
+            padding: 5px;
+            border-radius: 0.5rem;
+        }
         
         img {
             width: 15px;
@@ -275,10 +284,6 @@ footer {
     }
     
     section {
-        ul {
-            padding-left: 1rem;
-        }
-
         .btn-area {
             width: 100%;
             
@@ -335,13 +340,13 @@ footer {
 
 @media only screen and (min-width: 1024px) {
     header {
-        padding: 25px 125px;
+        padding: 25px 100px;
     }
 
     section {
         flex-direction: row;
 
-        padding: 25px 125px;
+        padding: 25px 100px;
         
         .image-area, .text-area {
             flex: 1;
@@ -349,10 +354,6 @@ footer {
 
         h1 {
             text-align: start;
-        }
-
-        ul {
-            padding-left: 1rem;
         }
 
         .btn-area {
@@ -413,6 +414,8 @@ footer {
         flex-direction: row;
         justify-content: space-between;
 
+        padding: 20px 100px;
+
         .dados {
             max-width: 300px;
         }
@@ -436,5 +439,19 @@ footer {
         .pipe {
             display: flex;
         }
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+    header {
+        padding: 25px 125px;
+    }
+
+    section {
+        padding: 25px 125px;
+    }
+
+    footer {
+        padding: 20px 125px;
     }
 }
