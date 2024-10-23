@@ -14,6 +14,22 @@
 </head>
 
 <body>
+    <!-- Dialog Modal -->
+    <dialog id="modal" autofocus>
+        <div id="test-back" class="test-back">
+            <form method="dialog">
+                <h2>Venha nos visitar!</h2>
+                <p>
+                    <img src="./assets/placeholder.png" width="20px" height="auto" alt="Localização">
+                    <a class="contato" href="https://maps.app.goo.gl/dAyRxmRfN4uoTJmr7" target="_blank">
+                        Abrir Google Maps
+                    </a>
+                </p>
+                <button class="btn btn-secondary">Fechar</button>
+            </form>
+        </div>
+    </dialog>
+    <!-- Dialog Modal -->
     <div class="scroll-header">
         <span>Conecte-se com a PetVet: </span>
         <a class="contato" href="https://maps.app.goo.gl/dAyRxmRfN4uoTJmr7" target="_blank">
@@ -67,7 +83,9 @@
                         <img src="./assets/whatsapp.png" width="20px" height="auto" alt="WhatsApp:">
                         Chame no WhatsApp
                     </a>
-                    <button type="button" class="btn btn-secondary full">Conheça nossa clínica</button>
+                    <button type="button" class="btn btn-secondary full" onclick="modal.show()">
+                        Conheça nossa clínica
+                    </button>
                 </div>
             </div>
         </section>
