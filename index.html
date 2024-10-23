@@ -14,14 +14,40 @@
 </head>
 
 <body>
+    <div class="scroll-header">
+        <span>Conecte-se com a PetVet: </span>
+        <a class="contato" href="https://maps.app.goo.gl/dAyRxmRfN4uoTJmr7" target="_blank">
+            <img src="./assets/placeholder.png" width="20px" height="auto" alt="Google Maps">
+        </a>
+        <a class="contato"
+            href="https://api.whatsapp.com/send?phone=5512123456789&text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20PetVet"
+            target="_blank">
+            <img src="./assets/whatsapp_black.png" width="20px" height="auto" alt="WhatsApp">
+        </a>
+        <a class="contato" href="tel: 1212345-6789">
+            <img src="./assets/phone.png" width="20px" height="auto" alt="Telefone">
+        </a>
+        <a class="contato" href="https://www.instagram.com" target="_blank">
+            <img src="./assets/instagram.png" width="20px" height="auto" alt="Instagram">
+        </a>
+        <a class="contato" href="https://www.facebook.com" target="_blank">
+            <img src="./assets/facebook.png" width="20px" height="auto" alt="Facebook">
+        </a>
+    </div>
     <header>
         <a class="title-header" href="index.html">PetVet</a>
 
-        <nav>
+        <nav class="nav-desktop">
             <a href="#inicio">Início</a>
             <a href="#clinica">Clínica</a>
             <a href="#farmacia">Farmácia</a>
             <a href="#duvidas">Dúvidas</a>
+        </nav>
+        <nav class="nav-mobile">
+            <a href="#inicio"><img src="./assets/home.png" alt="I"></a>
+            <a href="#clinica"><img src="./assets/pulse.png" alt="C"></a>
+            <a href="#farmacia"><img src="./assets/medicine.png" alt="F"></a>
+            <a href="#duvidas"><img src="./assets/question.png" alt="D"></a>
         </nav>
     </header>
 
@@ -33,10 +59,8 @@
             <div class="text-area">
                 <h1>Garanta uma vida longa e cheia de alegria para o seu melhor amigo.</h1>
                 <p>A PetVet é o seu refúgio de confiança para o cuidado completo do seu pet. Com profissionais dedicados
-                    e
-                    serviços abrangentes, oferecemos uma experiência acolhedora e personalizada, garantindo o bem-estar,
-                    a
-                    saúde e a felicidade dos seus animais de estimação.</p>
+                    e serviços abrangentes, oferecemos uma experiência acolhedora e personalizada, garantindo o
+                    bem-estar, a saúde e a felicidade dos seus animais de estimação.</p>
                 <div class="btn-area">
                     <a href="https://api.whatsapp.com/send?phone=5512123456789&text=Ol%C3%A1,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20PetVet"
                         class="btn btn-principal btn-whatsapp full" target="_blank">
@@ -51,9 +75,10 @@
             <div class="text-area">
                 <h1>Cuidado veterinário de qualidade</h1>
                 <p>Nossa clínica veterinária é o local onde a paixão pelos animais se une à excelência em cuidados
-                    veterinários. Sob a liderança da Dra. Vivien Reid, uma profissional altamente qualificada e
-                    comprometida, oferecemos serviços de saúde e bem-estar para animais de estimação de todas as
+                    veterinários. Sob a liderança do Dr. Dolittle, um profissional altamente qualificado e
+                    comprometido, oferecemos serviços de saúde e bem-estar para animais de estimação de todas as
                     espécies.
+                    <br>
                     Venha conhecer nossa clínica e desfrute da atenção personalizada e do carinho que seu pet merece.
                 </p>
                 <ul>
@@ -78,19 +103,13 @@
             <div class="text-area">
                 <h1>Venha conferir o nosso petshop e farmácia</h1>
                 <p>Além de ser uma clínica veterinária de confiança, também contamos com um completo petshop e farmácia.
-                    Nosso
-                    petshop oferece uma ampla seleção de produtos de alta qualidade, desde alimentos balanceados e
-                    petiscos
-                    deliciosos até brinquedos divertidos e acessórios elegantes para o seu pet. Na nossa farmácia, você
-                    encontrará uma variedade de medicamentos, produtos de cuidados e suplementos recomendados pelos
-                    nossos
-                    veterinários, garantindo que o bem-estar e a saúde do seu amado pet estejam sempre em boas mãos.
-                    Tudo o
-                    que
-                    você precisa para cuidar e mimar o seu pet está aqui, no nosso petshop e farmácia, com a mesma
-                    dedicação
-                    e
-                    qualidade que nos tornou referência na área veterinária.</p>
+                    Nosso petshop oferece uma ampla seleção de produtos de alta qualidade, desde alimentos balanceados e
+                    petiscos deliciosos até brinquedos divertidos e acessórios elegantes para o seu pet. Na nossa
+                    farmácia, você encontrará uma variedade de medicamentos, produtos de cuidados e suplementos
+                    recomendados pelos nossos veterinários, garantindo que o bem-estar e a saúde do seu amado pet
+                    estejam sempre em boas mãos. Tudo o que você precisa para cuidar e mimar o seu pet está aqui, no
+                    nosso petshop e farmácia, com a mesma dedicação e qualidade que nos tornou referência na área
+                    veterinária.</p>
             </div>
         </section>
         <section class="action-section">
@@ -109,70 +128,62 @@
             <div class="text-area">
                 <h1>Ficou com alguma dúvida?</h1>
                 <div class="accordion">
-                    <input type="checkbox" name="collapse1" id="handle1">
+                    <input type="checkbox" name="collapse" id="handle1">
                     <label for="handle1">
-                        <h3 class="handle">
-                            <img src="./assets/arrow-down.svg" alt="">
+                        <img src="./assets/arrow-down.svg" alt="">
+                        <h4 class="handle">
                             Quais serviços são oferecidos pela clínica veterinária da PetVet?
-                        </h3>
+                        </h4>
                     </label>
                     <div class="content">
                         <p>A clínica da PetVet oferece uma ampla gama de serviços, incluindo consultas de rotina,
-                            vacinação,
-                            cirurgias, tratamento de doenças, cuidados odontológicos, atendimento de emergência 24
-                            horas,
-                            programas de prevenção de pulgas, carrapatos e vermes, entre outros. Nosso objetivo é
-                            fornecer
-                            cuidados abrangentes e personalizados para garantir a saúde e o bem-estar do seu pet.</p>
+                            vacinação, cirurgias, tratamento de doenças, cuidados odontológicos, atendimento de
+                            emergência 24 horas, programas de prevenção de pulgas, carrapatos e vermes, entre outros.
+                            Nosso objetivo é fornecer cuidados abrangentes e personalizados para garantir a saúde e o
+                            bem-estar do seu pet.</p>
                     </div>
                 </div>
                 <div class="accordion">
-                    <input type="checkbox" name="collapse2" id="handle2">
+                    <input type="checkbox" name="collapse" id="handle2">
                     <label for="handle2">
                         <img src="./assets/arrow-down.svg" alt="">
-                        <h3 class="handle">Quais espécies de animais a clínica veterinária atende?</h3>
+                        <h4 class="handle">Quais espécies de animais a clínica veterinária atende?</h4>
                     </label>
                     <div class="content">
                         <p>A clínica veterinaria da PetVet atende animais de estimação de todas as espécies, incluindo
-                            cães,
-                            gatos, pássaros, roedores e répeteis. nossos profissionais possuem conhecimento e
-                            experiência
-                            para cuidar de diferentes tipos de animais, oferecendo um atendimento especializado e
-                            dedicado a
-                            cada um deles.</p>
+                            cães, gatos, pássaros, roedores e répteis. Nossos profissionais possuem conhecimento e
+                            experiência para cuidar de diferentes tipos de animais, oferecendo um atendimento
+                            especializado e dedicado a cada um deles.</p>
                     </div>
                 </div>
                 <div class="accordion">
-                    <input type="checkbox" name="collapse3" id="handle3">
+                    <input type="checkbox" name="collapse" id="handle3">
                     <label for="handle3">
                         <img src="./assets/arrow-down.svg" alt="">
-                        <h3 class="handle">A clínica veterinária da PetVet possui serviços de emergência?</h3>
+                        <h4 class="handle">A clínica veterinária da PetVet possui serviços de emergência?</h4>
                     </label>
                     <div class="content">
                         <p>Sim, a clínica veterinária da PetVet oferece serviços de emergência 24 horas. Se o seu animal
-                            de
-                            estimação precisar de atendimento veterinário imediato fora do horário de expediente, nossa
-                            equipe está pronta para ajudar, fornecendo cuidados urgentes e tratamento adequado para
-                            garantir
-                            o bem-estar do seu pet.</p>
+                            de estimação precisar de atendimento veterinário imediato fora do horário de expediente,
+                            nossa equipe está pronta para ajudar, fornecendo cuidados urgentes e tratamento adequado
+                            para garantir o bem-estar do seu pet.</p>
                     </div>
                 </div>
                 <div class="accordion">
-                    <input type="checkbox" name="collapse4" id="handle4">
+                    <input type="checkbox" name="collapse" id="handle4">
                     <label for="handle4">
                         <img src="./assets/arrow-down.svg" alt="">
-                        <h3 class="handle">
+                        <h4 class="handle">
                             A clínica oferece serviços de banho e tosa?
-                        </h3>
+                        </h4>
                     </label>
                     <div class="content">
                         <p>Sim, a clínica veterinária da PetVet oferece serviços profissionais de banho e tosa. Nossa
-                            equipe
-                            de
-                            profissionais experientes garante que seu pet receva cuidados adequados, usando produtos de
-                            alta
-                            qualidade e técnicas seguras. o banho e tosa ajudam a manter a higiene, a saúde da pele e
-                            pelagem do seu pet, além proporcionar uma experiência relaxante e agradável para eles.</p>
+                            equipe de profissionais experientes garante que seu pet receba cuidados adequados, usando
+                            produtos de qualidade e técnicas seguras. O banho e tosa ajudam a manter a higiene, a saúde
+                            da pele e pelagem do seu pet, além de proporcionar uma experiência relaxante e agradável
+                            para
+                            eles.</p>
                     </div>
                 </div>
             </div>
@@ -206,7 +217,7 @@
             <h4>Onde estamos</h4>
             <a class="contato" href="https://maps.app.goo.gl/dAyRxmRfN4uoTJmr7" target="_blank">
                 <img src="./assets/placeholder.png" width="20px" height="auto" alt="Endereço:">
-                Avenida Qualquer, 123, Centro - Taubaté/SP
+                Avenida Principal, 123, Centro - Taubaté/SP
             </a>
         </div>
         <div class="dados">
