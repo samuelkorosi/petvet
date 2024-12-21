@@ -18,6 +18,10 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #fffdfb;
+}
+
 div.scroll-header {
     display: flex;
     flex-direction: row;
@@ -218,13 +222,26 @@ section {
 
 .accordion .content {
     overflow-y: hidden;
-    height: 0;
-    transition: height 0.3s ease;
+    max-height: 0px;
+    transition: max-height 0.3s;
 }
 
 .accordion > input[type="checkbox"]:checked ~ .content {
-    height: auto;
+    max-height: 300px;
     overflow: visible;
+}
+
+.accordion > input[type="checkbox"]:checked ~ label> img {
+    transform: rotate(180deg);
+    transition: 0.3s;
+    padding-left: 0.5rem;
+    padding-right: 0;
+}
+.accordion > input[type="checkbox"]:not(:checked) ~ label> img {
+    transform: rotate(0deg);
+    transition: 0.3s;
+    padding-left: 0rem;
+    padding-right: 0.5rem;
 }
 
 .accordion label {
@@ -247,6 +264,7 @@ section {
 
         &:hover {            
             background-color: var(--principal-color);
+            transition: ease 0.2s;
         }
 
         img {
@@ -315,6 +333,7 @@ footer {
     gap: 0.5rem;
 
     background-color: var(--bg-dev-color);
+    backdrop-filter: blur(2px);
     width: 100%;
     height: auto;
     padding: 5px 5px;
